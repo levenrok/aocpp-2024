@@ -10,8 +10,8 @@ int main(void) {
     std::vector<int> right_col;
 
     std::ifstream puzzle_input("input.txt");
-    if (!puzzle_input) {
-        std::cerr << "Error: file not found" << '\n';
+    if (!puzzle_input.is_open()) {
+        std::cerr << "Error: cannot open file" << '\n';
         exit(1);
     }
 
